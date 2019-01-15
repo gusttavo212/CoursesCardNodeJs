@@ -7,7 +7,7 @@ const CardSchema = new mongoose.Schema({
         require: true
     },
     price: {
-        type: Float32Array,
+        type: Number,
         require: true
     },
     description : {
@@ -20,5 +20,5 @@ const CardSchema = new mongoose.Schema({
     }
 });
 
-CardSchema.plugin(mongoose);
-mongoose.model("Card", ProductSchema)
+CardSchema.plugin(mongoosePaginate);
+mongoose.model("Card", CardSchema)
