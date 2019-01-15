@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Card = mongoose.model('Card');
+const Card = require('../models/card')
 
 module.exports = {
     async index (req,res) {

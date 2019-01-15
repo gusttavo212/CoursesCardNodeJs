@@ -19,6 +19,7 @@ const CardSchema = new mongoose.Schema({
         default: Date.now
     }
 });
-
 CardSchema.plugin(mongoosePaginate);
-mongoose.model("Card", CardSchema)
+module.exports = mongoose.model('Card', CardSchema)
+
+//mongoose.model("Card", CardSchema)
